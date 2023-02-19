@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <div class="global">
+      <div class="menu">
+          <div>
+            {% if user.is_admin %}
+              <a href="{{ url_for('add_user') }}" >Agregar Usuario</a>
+              <a href="{{ url_for('add_list') }}" >Agregar Lista</a>
+            {% else %}
+              <a href="{{ url_for('votar')}}">Votar</a>
+            {% endif %}
+          </div>
+      </div>
+    <div class="content">
+      <div>
+        <table>
+          <tr>
+            <th>Cantidad de Habilitados</th>
+            <td>{{ resultado.cantidad_habilitados }}</td>
+          </tr>
+          <tr>
+            <th>Cantidad de Votantes</th>
+            <td>{{ resultado.cantidad_votantes }}</td>
+          </tr>
+
+        </table>
+      </div>
+      <br />
+      <div>
+        <h4>Listas:</h4>
+        <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad de Votos</th>
+            </tr>
+            {% for item in listas %}
+              <tr>
+                  <th>{{ item.nombre }}</th>
+                  <th>{{ item.cantidad_votos }}</th>
+              </tr>
+            {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

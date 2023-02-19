@@ -1,0 +1,115 @@
+.global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.global div {
+  width: 45%;
+  text-align: center;
+}
+
+.global h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.global p {
+  margin: 10px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ddd;
+}
+
+.menu {
+  background-color: #7777777;
+  width: 303px !important;
+  height: 100%;
+  float: left;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.menu a {
+  display: block;
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+}
+
+.base {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+form label {
+  width: 40%;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"], form input[type="submit"] {
+  width: 60%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  width : 80px;
+  color: white;
+  cursor: pointer;
+}

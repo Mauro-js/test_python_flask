@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Elecciones</title>
+    </head>
+    <body>
+        <div class="base" >
+                <a href="{{ url_for('home') }}">Inicio</a>
+                {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Iniciar sesión</a>
+                {% else %}
+                 Usuario : {{ current_user.name }} <a href="{{ url_for('logout') }}" class="button" >Cerrar sesión</a>
+                {% endif %}
+            <hr />
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                  <ul>
+                      {% for message in messages %}
+                      <li>{{ message }}</li>
+                      {% endfor %}
+                  </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>

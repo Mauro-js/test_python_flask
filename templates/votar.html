@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if empty %}
+        <h2> No hay listas cargadas </h2>
+    {% endif %}
+    <table>
+        {% for item in listas %}
+        <tr>
+          <th><a  href="{{ url_for('confirmar_voto', name=item.nombre) }}">{{ item.nombre }}</a ></th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
